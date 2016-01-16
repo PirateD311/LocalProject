@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var oPvStats=require('../DIY_Fun/Visitor.js');
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //流量统计方法

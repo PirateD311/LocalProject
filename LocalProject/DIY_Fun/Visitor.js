@@ -1,4 +1,4 @@
-
+console.log("Node Build Test");
 //module.exports=oPvStats;
 //流量统计类,针对来源（网站ip）进行区分
 /*
