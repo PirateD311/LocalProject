@@ -4,10 +4,9 @@ var http=require('http'),
 
 var SpiderEat=require("./SpiderEat.js"),
 	SpiderMind=require("./SpiderMind.js");
-var url="http://www.rrrr58.com/p02/index.html";
+var url="http://www.rrrr58.com/p04/list_13.html";
 var urlWait=[];
 	main();
-
 
 function main(){
 	count=0;
@@ -17,8 +16,13 @@ function main(){
 function gg(){
 	console.log("Clam...");
 	
-	if(oSpiderMind.hasNext()&&count++<100){
-		SpiderRun(oSpiderMind.next(),function(){
+	if(oSpiderMind.hasNext()){
+		var nexturl=oSpiderMind.next();
+		if(nexturl.match(/\/htm.+p\d.+?.html/ig)==null&&nexturl.match(/\/htm.+[a-z]\d.+?.html/ig)!=null){
+			gg();
+			return;
+		}
+		SpiderRun(nexturl,function(){
 			setTimeout(function(){
 				gg();
 			},3000)
@@ -32,6 +36,7 @@ function gg(){
 }
 
 function SpiderRun(startUrl,callback){
+
 	try{
 		var req=http.request(startUrl,function(res){
 			console.log(res.statusCode);
@@ -53,6 +58,13 @@ function SpiderRun(startUrl,callback){
 				oSpiderMind.inputURL(urls);
 				callback();
 			});
+			res.on('error',function(err){
+				console.log("Response Error:",err);
+			});
+		});
+		req.on('error',function(err){
+			console.log(err);
+			callback(err);
 		});
 		req.end();
 	}catch(err){

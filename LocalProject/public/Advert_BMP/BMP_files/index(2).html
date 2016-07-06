@@ -1,0 +1,415 @@
+
+<!-- saved from url=(0065)http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/Index -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>管理页面</title>
+
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #F8F9FA;
+}
+.current{
+	color:#F00;
+}
+-->
+</style>
+<script language="javascript" src="jquery.js"></script>
+<script language="javascript" src="getdata.js"></script></head><body marginwidth="0" marginheight="0"><div id="divTiannetDate" style="width:150;background-color:#2650A6;display:none;z-index:9998;position:absolute;border-left:1 solid #CCCCCC;border-top:1 solid #CCCCCC;border-right:1 solid #999999;border-bottom:1 solid #999999;"><div align="center" id="divTiannetDateText" author="tiannet" style="padding-top:2px;"><span id="tiannetYearHead" author="tiannet" style="color:#FFCC00;font-size:9pt;cursor:hand;" onclick="spanYearCEvent();">&nbsp;年</span><select id="selTianYear" style="width:64px;display:none;" author="tiannet" onchange="tiannetYear=this.value;tiannetSetDay(tiannetYear,tiannetMonth);document.all.tiannetYearHead.style.display=&#39;&#39;;this.style.display=&#39;none&#39;;"><option value="1950">1950年</option>
+<option value="1951">1951年</option>
+<option value="1952">1952年</option>
+<option value="1953">1953年</option>
+<option value="1954">1954年</option>
+<option value="1955">1955年</option>
+<option value="1956">1956年</option>
+<option value="1957">1957年</option>
+<option value="1958">1958年</option>
+<option value="1959">1959年</option>
+<option value="1960">1960年</option>
+<option value="1961">1961年</option>
+<option value="1962">1962年</option>
+<option value="1963">1963年</option>
+<option value="1964">1964年</option>
+<option value="1965">1965年</option>
+<option value="1966">1966年</option>
+<option value="1967">1967年</option>
+<option value="1968">1968年</option>
+<option value="1969">1969年</option>
+<option value="1970">1970年</option>
+<option value="1971">1971年</option>
+<option value="1972">1972年</option>
+<option value="1973">1973年</option>
+<option value="1974">1974年</option>
+<option value="1975">1975年</option>
+<option value="1976">1976年</option>
+<option value="1977">1977年</option>
+<option value="1978">1978年</option>
+<option value="1979">1979年</option>
+<option value="1980">1980年</option>
+<option value="1981">1981年</option>
+<option value="1982">1982年</option>
+<option value="1983">1983年</option>
+<option value="1984">1984年</option>
+<option value="1985">1985年</option>
+<option value="1986">1986年</option>
+<option value="1987">1987年</option>
+<option value="1988">1988年</option>
+<option value="1989">1989年</option>
+<option value="1990">1990年</option>
+<option value="1991">1991年</option>
+<option value="1992">1992年</option>
+<option value="1993">1993年</option>
+<option value="1994">1994年</option>
+<option value="1995">1995年</option>
+<option value="1996">1996年</option>
+<option value="1997">1997年</option>
+<option value="1998">1998年</option>
+<option value="1999">1999年</option>
+<option value="2000">2000年</option>
+<option value="2001">2001年</option>
+<option value="2002">2002年</option>
+<option value="2003">2003年</option>
+<option value="2004">2004年</option>
+<option value="2005">2005年</option>
+<option value="2006">2006年</option>
+<option value="2007">2007年</option>
+<option value="2008">2008年</option>
+<option value="2009">2009年</option>
+<option value="2010">2010年</option>
+</select><span id="tiannetMonthHead" author="tiannet" style="color:#FFCC00;font-size:9pt;cursor:hand;" onclick="spanMonthCEvent();">&nbsp;&nbsp;月</span><select id="selTianMonth" style="width:46px;display:none;" author="tiannet" onchange="tiannetMonth=this.value;tiannetSetDay(tiannetYear,tiannetMonth);document.all.tiannetMonthHead.style.display=&#39;&#39;;this.style.display=&#39;none&#39;;"><option value="1">1月</option>
+<option value="2">2月</option>
+<option value="3">3月</option>
+<option value="4">4月</option>
+<option value="5">5月</option>
+<option value="6">6月</option>
+<option value="7">7月</option>
+<option value="8">8月</option>
+<option value="9">9月</option>
+<option value="10">10月</option>
+<option value="11">11月</option>
+<option value="12">12月</option>
+</select><span id="tiannetHourHead" author="tiannet" style="color:#FFCC00;font-size:9pt;cursor:hand;display:none;" onclick="spanHourCEvent();">&nbsp;时</span><select id="selTianHour" style="width:46px;display:none;display:none;" author="tiannet" onchange="tiannetHour=this.value;tiannetWriteHead();document.all.tiannetHourHead.style.display=&#39;&#39;;this.style.display=&#39;none&#39;;"><option value="0">0时</option>
+<option value="1">1时</option>
+<option value="2">2时</option>
+<option value="3">3时</option>
+<option value="4">4时</option>
+<option value="5">5时</option>
+<option value="6">6时</option>
+<option value="7">7时</option>
+<option value="8">8时</option>
+<option value="9">9时</option>
+<option value="10">10时</option>
+<option value="11">11时</option>
+<option value="12">12时</option>
+<option value="13">13时</option>
+<option value="14">14时</option>
+<option value="15">15时</option>
+<option value="16">16时</option>
+<option value="17">17时</option>
+<option value="18">18时</option>
+<option value="19">19时</option>
+<option value="20">20时</option>
+<option value="21">21时</option>
+<option value="22">22时</option>
+<option value="23">23时</option>
+</select><span id="tiannetMinuteHead" author="tiannet" style="color:#FFCC00;font-size:9pt;cursor:hand;display:none;" onclick="spanMinuteCEvent();">&nbsp;&nbsp;分</span><select id="selTianMinute" style="width:46px;display:none;display:none;" author="tiannet" onchange="tiannetMinute=this.value;tiannetWriteHead();document.all.tiannetMinuteHead.style.display=&#39;&#39;;this.style.display=&#39;none&#39;;"><option value="0">0分</option>
+<option value="1">1分</option>
+<option value="2">2分</option>
+<option value="3">3分</option>
+<option value="4">4分</option>
+<option value="5">5分</option>
+<option value="6">6分</option>
+<option value="7">7分</option>
+<option value="8">8分</option>
+<option value="9">9分</option>
+<option value="10">10分</option>
+<option value="11">11分</option>
+<option value="12">12分</option>
+<option value="13">13分</option>
+<option value="14">14分</option>
+<option value="15">15分</option>
+<option value="16">16分</option>
+<option value="17">17分</option>
+<option value="18">18分</option>
+<option value="19">19分</option>
+<option value="20">20分</option>
+<option value="21">21分</option>
+<option value="22">22分</option>
+<option value="23">23分</option>
+<option value="24">24分</option>
+<option value="25">25分</option>
+<option value="26">26分</option>
+<option value="27">27分</option>
+<option value="28">28分</option>
+<option value="29">29分</option>
+<option value="30">30分</option>
+<option value="31">31分</option>
+<option value="32">32分</option>
+<option value="33">33分</option>
+<option value="34">34分</option>
+<option value="35">35分</option>
+<option value="36">36分</option>
+<option value="37">37分</option>
+<option value="38">38分</option>
+<option value="39">39分</option>
+<option value="40">40分</option>
+<option value="41">41分</option>
+<option value="42">42分</option>
+<option value="43">43分</option>
+<option value="44">44分</option>
+<option value="45">45分</option>
+<option value="46">46分</option>
+<option value="47">47分</option>
+<option value="48">48分</option>
+<option value="49">49分</option>
+<option value="50">50分</option>
+<option value="51">51分</option>
+<option value="52">52分</option>
+<option value="53">53分</option>
+<option value="54">54分</option>
+<option value="55">55分</option>
+<option value="56">56分</option>
+<option value="57">57分</option>
+<option value="58">58分</option>
+<option value="59">59分</option>
+</select></div><div style="border-bottom:1 solid #6699CC"></div><div align="center" id="divTiannetTurn" style="border:0;" author="tiannet"><input type="button" style="width:28px;height:16px;font-size:9pt;color:white;border:0 solid #CCCCCC;cursor:hand;background-color:#2650A6;" value="年↑" title="上一年" onclick="tiannetPrevYear();"><input type="button" style="width:28px;height:16px;font-size:9pt;color:white;border:0 solid #CCCCCC;cursor:hand;background-color:#2650A6;" value="年↓" title="下一年" onclick="tiannetNextYear();">&nbsp;<input type="button" style="width:28px;height:16px;font-size:9pt;color:white;border:0 solid #CCCCCC;cursor:hand;background-color:#2650A6;" value="月↑" title="上一月" onclick="tiannetPrevMonth();"><input type="button" style="width:28px;height:16px;font-size:9pt;color:white;border:0 solid #CCCCCC;cursor:hand;background-color:#2650A6;" value="月↓" title="下一月" onclick="tiannetNextMonth();"></div><div style="border-bottom:1 solid #6699CC"></div><table border="0" cellspacing="0" cellpadding="0" bgcolor="white" onselectstart="return false"> <tbody><tr style="background-color:#2650A6;font-size:10pt;color:white;height:22px;" author="tiannet"><td width="21" align="center" author="tiannet">日</td><td width="21" align="center" author="tiannet">一</td><td width="21" align="center" author="tiannet">二</td><td width="21" align="center" author="tiannet">三</td><td width="21" align="center" author="tiannet">四</td><td width="21" align="center" author="tiannet">五</td><td width="21" align="center" author="tiannet">六</td> </tr></tbody></table><table border="0" cellspacing="1" cellpadding="0" bgcolor="white" onselectstart="return false"> <tbody><tr align="center" id="trTiannetDay0"><td align="center" id="tdTiannetDay0" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay1" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay2" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay3" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay4" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay5" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay6" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td> </tr> <tr align="center" id="trTiannetDay1"><td align="center" id="tdTiannetDay7" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay8" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay9" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay10" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay11" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay12" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay13" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td> </tr> <tr align="center" id="trTiannetDay2"><td align="center" id="tdTiannetDay14" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay15" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay16" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay17" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay18" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay19" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay20" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td> </tr> <tr align="center" id="trTiannetDay3"><td align="center" id="tdTiannetDay21" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay22" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay23" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay24" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay25" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay26" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay27" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td> </tr> <tr align="center" id="trTiannetDay4"><td align="center" id="tdTiannetDay28" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay29" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay30" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay31" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay32" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay33" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay34" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td> </tr> <tr align="center" id="trTiannetDay5"><td align="center" id="tdTiannetDay35" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="center" id="tdTiannetDay36" onclick="tiannetDay=this.innerText;tiannetSetValue(true);" style="width:21px;height:20px;background-color:#D8F0FC;font-size:10pt;">&nbsp;</td><td align="right" colspan="5"><a href="javascript:tiannetClear();" style="text-decoration:none;font-size:9pt;color:#2650A6;">清空</a>&nbsp;<a href="javascript:tiannetHideControl();" style="text-decoration:none;font-size:9pt;color:#2650A6;">关闭</a>&nbsp;<a href="javascript:tiannetSetValue(true);" style="text-decoration:none;font-size:9pt;color:#2650A6;">确定</a>&nbsp;</td> </tr></tbody></table></div>
+<script language="javascript">
+function secBoard(i){
+	$('#se0').removeClass();
+	$('#se1').removeClass();
+	if(i==0){
+		$('#se0').addClass("sec2");
+		$('#se1').addClass("sec1");
+		
+		$('#mainTable1').hide();
+		$('#mainTable0').slideDown("slow");
+	}else{
+		$('#se0').addClass("sec1");
+		$('#se1').addClass("sec2");
+		
+		$('#mainTable1').slideDown("slow");
+		$('#mainTable0').hide();
+	}
+	if(i==1){
+		getGenJin();
+	}
+}
+
+$(document).ready(function(){
+	$.get("/meij/meijie/index.php?s=/Main/ajaxGetThereDay&ajax=1", function(data){
+  	$('#mainTable0').html(data);
+	});
+});
+
+function getGenJin(){
+	$.get("/meij/meijie/index.php?s=/Main/ajaxGetGenJin&ajax=1", function(data){
+  	$('#mainTable1').html(data);
+	});
+}
+</script>
+<link href="skin.css" rel="stylesheet" type="text/css">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="17" height="29" valign="top" background="mail_leftbg.gif"><img src="left-top-right.gif" width="17" height="29"></td>
+    <td width="1122" height="29" valign="top" background="content-bg.gif">
+    
+    <table width="100%" height="15" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tbody><tr>
+        <td height="15"><div class="titlebt"><span class="left_txt">系统首页</span></div></td>
+      </tr>
+    </tbody></table>
+    
+    </td>
+    <td width="20" valign="top" background="mail_rightbg.gif"><img src="nav-right-bg.gif" width="16" height="29"></td>
+  </tr>
+  <tr>
+    <td height="71" valign="middle" background="mail_leftbg.gif">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9"><table width="100%" height="138" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td valign="top"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td class="left_txt">当前位置：用户系统首页</td>
+          </tr>
+          <tr>
+            <td height="20"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+              <tbody><tr>
+                <td></td>
+              </tr>
+            </tbody></table></td>
+          </tr>
+          <tr>
+            <td>
+            
+            <table width="100%" height="55" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td width="10%" height="55" valign="middle"><img src="title.gif" width="54" height="55"></td>
+                <td width="90%" valign="top"><span class="left_txt2">在这里，您可以查看自己的广告状况！</span><br>
+                          <span class="left_txt2">包括 CPA,CPC,CPM,富媒体的点击显示状况和其他一些相关信息。 </span></td>
+              </tr>
+            </tbody></table></td>
+          </tr>
+          <tr>
+            <td height="3">&nbsp;</td>
+          </tr>
+          <tr height="20">
+            <td valign="middle">
+<table width="30%" border="0" cellpadding="0" cellspacing="0" id="secTable">
+<tbody>
+<tr align="middle" height="20">
+<td align="center" class="sec2" id="se0" onclick="secBoard(0)" style="cursor:hand;">最近三天记录</td>
+<td align="center" class="sec1" id="se1" onclick="secBoard(1)" style="cursor:hand;">跟进信息提醒</td>
+</tr>
+</tbody>
+</table>
+<div id="mainTable0" style="display:block"><table class="main_tab" cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td valign="top" align="middle">
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+    <tr>
+        <td height="5" colspan="3"></td>
+    </tr>
+    <tr>
+        <td style=" margin:5px; text-align:center;"></td>
+    </tr>
+    <tr style="font-weight:bold;">
+        <td width="2%" height="22" background="news-title-bg.gif"></td>
+        <td width="25%" height="22" background="news-title-bg.gif" class="left_txt">3天流量对比</td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">前二天[2016-02-18]</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">前一天[2016-02-19]</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">今天[2016-02-20]</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">三日流量对比</span> <span class="left_ts"></span></td>
+    </tr>
+    <tr>
+        <td width="2%" height="22" background="news-title-bg.gif"></td>
+        <td width="25%" height="22" background="news-title-bg.gif" class="left_txt">点击</td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">0</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">0</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">0</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt"></span> <span class="left_ts"> </span></td>
+    </tr>
+    <tr>
+        <td width="2%" height="22" background="news-title-bg.gif"></td>
+        <td width="25%" height="22" background="news-title-bg.gif" class="left_txt">弹窗</td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">990304</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">910088</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">270754</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC">
+            <span class="left_txt">
+            <a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/mySiteFlux/type/cpm" target="_blank">弹窗流量三日对比</a>
+            </span> <span class="left_ts"> </span>
+        </td>
+    </tr>
+    <tr>
+        <td width="2%" height="22" background="news-title-bg.gif"></td>
+        <td width="25%" height="22" background="news-title-bg.gif" class="left_txt">富媒体</td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">540820</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">315440</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">153038</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC">
+            <span class="left_txt">
+            <a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/mySiteFlux/type/cpv" target="_blank">富媒体流量三日对比</a>
+            </span> <span class="left_ts"> </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td width="2%" height="22" background="news-title-bg.gif"></td>
+        <td width="25%" height="22" background="news-title-bg.gif" class="left_txt">wap通栏</td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">2</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">3</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC"><span class="left_txt">1</span> <span class="left_ts"> </span></td>
+        <td height="25" bgcolor="#FAFBFC">
+            <span class="left_txt">
+            <a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/mySiteFlux/type/mobile" target="_blank">wap通栏流量三日对比</a>
+            </span> <span class="left_ts"> </span>
+        </td>
+    </tr>
+    <tr>
+        <td height="5" colspan="5"> </td>
+    </tr>
+        </tbody>
+        </table>      
+</td>
+</tr>
+</tbody>
+</table></div>
+
+<div id="mainTable1" style="display:none">
+<img src="load.gif">
+
+</div>
+              </td>
+             <td valign="middle">
+             <table>
+             
+             </table>
+             </td>
+          </tr>
+          <tr height="2">
+            <td valign="middle">&nbsp;</td>
+          </tr>
+            <tr bgcolor="#EDF4FE" height="20"><form action="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main" method="post"></form>
+            <td valign="middle" style="margin:10px; font-size:16px;">&nbsp;&nbsp;<b>请选择日期：</b>
+              <input type="text" name="starttime" value="2016-02-20" onfocus="setDay(this);" size="15">
+              <input type="submit" name="button" id="button" style="width:69px;height:26px;padding:auto 5px;" value="查询"></td><input type="hidden" name="__hash__" value="d912df3443b802305510a007a0b740e5">
+          </tr>
+           <tr>
+            <td height="3"></td>
+          </tr>
+          <tr>
+            <td><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+              <tbody><tr>
+                <td class="left_bt2">&nbsp;&nbsp;&nbsp;站点排名</td>
+              </tr>
+            </tbody></table></td>
+          </tr>
+          <tr>
+            <td><table width="100%" class="mytable">
+              <tbody><tr bgcolor="#f2f2f2" style="font-weight:bold;">
+                <td width="10%" height="30" align="center">日期</td>
+                <td width="10%" align="center">网站主</td>
+                <td width="11%" height="30" align="center" bgcolor="#f2f2f2">媒介成员</td>
+                <td width="6%" align="center"><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/&amp;order=6_3">CPA</a></td>
+                <td width="8%" align="center"> <a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/&amp;order=1_3">富媒体</a></td>
+                <td width="8%" height="30" align="center"><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/&amp;order=2_3_cpc">CPC</a></td>
+                <td width="9%" align="center"><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/&amp;order=3_3">CPM</a></td>
+                <td width="11%" align="center">网站主的钱</td>
+                <td width="11%" align="center">成员的钱(参考)</td>
+              </tr>
+              <tr id="StatTable"></tr>
+              <tr bgcolor="#f2f2f2" style="font-weight:bold;">
+                <td height="30" align="center" colspan="3" class="left_txt2">统计信息</td>
+                <td height="30" align="center">0</td>
+                <td height="30" align="center">84495</td>
+                <td height="30" align="center" class="left_txt">0</td>
+                <td height="30" align="center" class="left_txt">258861</td>
+                <td height="30" align="center" class="left_txt">0</td>
+                <td height="30" align="center" class="left_txt">
+                                 	0                                
+                </td>
+              </tr>
+              <tr>
+                <td class="nowtable" colspan="15" align="center"> 78 篇记录 1/3 页  <a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=%2FMain%2FIndex&amp;starttime=2016-02-20&amp;p=2">&gt;</a>     &nbsp;<span class="current">1</span>&nbsp;<a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=%2FMain%2FIndex&amp;starttime=2016-02-20&amp;p=2">&nbsp;2&nbsp;</a>&nbsp;<a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=%2FMain%2FIndex&amp;starttime=2016-02-20&amp;p=3">&nbsp;3&nbsp;</a>   </td>
+              </tr>
+            </tbody></table></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+    </tbody></table></td>
+    <td background="mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="middle" background="mail_leftbg.gif"><img src="buttom_left2.gif" width="17" height="17"></td>
+      <td height="17" valign="top" background="buttom_bgs.gif"><img src="buttom_bgs.gif" width="17" height="17"></td>
+    <td background="mail_rightbg.gif"><img src="buttom_right2.gif" width="16" height="17"></td>
+  </tr>
+</tbody></table>
+
+
+</body></html>

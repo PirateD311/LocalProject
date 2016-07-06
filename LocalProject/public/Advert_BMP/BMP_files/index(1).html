@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0065)http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Index/left -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>管理页面</title>
+<script type="text/javascript" src="jquery.js"></script> 
+<script type="text/javascript"> 
+var jQuery=$; 
+</script> 
+<script src="prototype.lite.js" type="text/javascript"></script>
+<script src="moo.fx.js" type="text/javascript"></script>
+<script src="moo.fx.pack.js" type="text/javascript"></script>
+<style>
+body {
+	font:12px Arial, Helvetica, sans-serif;
+	color: #000;
+	background-color: #EEF2FB;
+	margin: 0px;
+}
+#container {
+	width: 182px;
+}
+H1 {
+	font-size: 12px;
+	margin: 0px;
+	width: 182px;
+	cursor: pointer;
+	height: 30px;
+	line-height: 20px;	
+}
+H1 a {
+	display: block;
+	width: 182px;
+	color: #000;
+	height: 30px;
+	text-decoration: none;
+	moz-outline-style: none;
+	background-image: url(/meij/Public/Images/menu_bgS.gif);
+	background-repeat: no-repeat;
+	line-height: 30px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+.content{
+	width: 182px;
+	height: 26px;
+	
+}
+.MM ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	text-align:left;
+}
+.MM li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 26px;
+	color: #333333;
+	list-style-type: none;
+	display: block;
+	text-decoration: none;
+	height: 26px;
+	width: 182px;
+	padding-left: 0px;
+	text-align:left;
+}
+.MM {
+	width: 182px;
+	margin: 0px;
+	padding: 0px;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	clip: rect(0px,0px,0px,0px);
+	text-align:left;
+}
+.MM a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 26px;
+	color: #333333;
+	background: url(/meij/Public/Images/menu_bg1.gif) no-repeat;
+	height: 26px;
+	width: 182px;
+	display: block;
+	margin: 0px;
+	padding-left:60px;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+.MM a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #006600;
+	background: url(/meij/Public/Images/menu_bg2.gif) no-repeat;
+	display: block;
+	margin: 0px;
+	padding-left:60px;
+	height: 26px;
+	width: 182px;
+	text-decoration: none;
+}
+</style>
+<script language="javascript">
+jQuery(document).ready(function(){
+	getNum();
+});
+
+setTimeout('getNum()', 3000);
+
+function getNum(){
+	jQuery.get("/meij/meijie/index.php?s=/Other/_ajaxGetPrompt&site=left&ajax=1", function(data){
+		var json = eval('('+data+')');
+		for(var i=0; i<json.length; i++){
+		  if(i==0)jQuery('#newdomin').html('('+json[i]+')');
+		  if(i==1)jQuery('#sqguanggao').html('('+json[i]+')');
+		  if(i==2)jQuery('#levalmsg').html('('+json[i]+')');
+		  if(i==3)jQuery('#newSite').html('('+json[i]+')');newSite
+		  if(i==4)jQuery('#edituser').html('('+json[i]+')');
+		}
+	});
+}
+
+</script></head>
+
+
+
+<body marginwidth="0" marginheight="0">
+<table width="100%" style="margin-left:5px;" height="280" border="0" cellpadding="0" cellspacing="0" bgcolor="#EEF2FB">
+  <tbody><tr>
+    <td width="182" valign="top"><div id="container">
+      <h1 class="type"><a href="javascript:void(0)">系统管理</a></h1>
+      <div class="content" style="visibility: visible; opacity: 1; overflow: hidden; height: 1%;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td><img src="menu_topline.gif" width="182" height="5"></td>
+          </tr>
+        </tbody></table>
+        <ul class="MM">
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/Index" target="main">系统首页</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/Mysite" target="main">新站投放</a></li>
+		  <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Main/Putinsite" target="main">恢复投放</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Money/Index" target="main">佣金查询</a></li>
+           		  <li><a href="http://manage2014.ete.cn:2745/kpi/" target="_blank">KPI登录</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/bugfree/?f=index&amp;act=bug" target="_blank">技术支持</a></li>
+        </ul>
+      </div>
+      <h1 class="type"><a href="javascript:void(0)">网站管理</a></h1>
+      <div class="content" style="visibility: hidden; opacity: 0; overflow: hidden; height: 0px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td><img src="menu_topline.gif" width="182" height="5"></td>
+          </tr>
+        </tbody></table>
+        <ul class="MM">
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/Index" target="main">网站主审核<span id="newSite" style="color:#F00; font-size:14px">(0)</span></a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/AllPublisher" target="main">所有网站</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/EditedPublisher" target="main">待审核会员<span id="edituser" style="color:#F00; font-size:14px">(0)</span></a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/OkPublisher" target="main">正常会员</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/LockPublisher" target="main">锁定网站</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/AllUser" target="main">所有会员</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/BlackList" target="main">黑名单</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/NewDomain" target="main">域名验证审核<span id="newdomin" style="color:#F00; font-size:14px">(0)</span></a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/LockPublisher" target="main">锁定会员</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/NewDomain&amp;act=all" target="main">正常网站</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/NewDomain&amp;act=cancel" target="main">撤销网站</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Publisher/idCardPublisher" target="main">身份验证审核</a></li>
+        </ul>
+      </div>
+      <h1 class="type"><a href="javascript:void(0)">广告管理</a></h1>
+      <div class="content" style="visibility: hidden; opacity: 0; overflow: hidden; height: 0px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td><img src="menu_topline.gif" width="182" height="5"></td>
+          </tr>
+        </tbody></table>
+        <ul class="MM">
+		  <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Advertiser/Index" target="main">广告供求管理</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Advertiser/Examine" target="main">站长广告申请<span id="sqguanggao" style="color:#F00; font-size:14px">(0)</span></a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Advertiser/Adplace" target="main">广告位查询</a></li>
+          <!--<li><a href="/meij/meijie/index.php?s=/Advertiser/AdplaceTrack" target="main">广告位管理-点击</a></li>
+          <li><a href="/meij/meijie/index.php?s=/Advertiser/AdplaceManage" target="main">广告位管理-弹窗</a></li>
+          <li><a href="/meij/meijie/index.php?s=/Advertiser/AdplaceMedia" target="main">广告位管理-富媒体</a></li>-->
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Advertiser/CpcEffect" target="main">效果管理-点击</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Advertiser/SiteEffect" target="main">效果管理-弹窗</a></li>
+		  <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Advertiser/MediaEffect" target="main">效果管理-富媒体</a></li>
+		  <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Advertiser/WapEffect" target="main">效果管理-Wap</a></li>
+                  <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Advertiser/Uppv" target="main">效果管理-详细功能</a></li>
+		  <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Advertiser/CarouselMedia" target="main">不托管广告位管理</a></li>
+		  <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Advertiser/Networkmanagement" target="main">特殊地址管理</a></li>
+        </ul>
+      </div>
+      <h1 class="type"><a href="javascript:void(0)">CRM管理</a></h1>
+      <div class="content" style="visibility: hidden; opacity: 0; overflow: hidden; height: 0px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td><img src="menu_topline.gif" width="182" height="5"></td>
+          </tr>
+        </tbody></table>
+        <ul class="MM">
+		  <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Crm/TodayPlan" target="main">今日跟进客户</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Crm/Index" target="main">添加客户信息</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Crm/UserManage" target="main">客户信息管理</a></li>
+          <!--<li><a href="/meij/meijie/index.php?s=/Crm/AllUser" target="main">所有客户信息</a></li>-->
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Crm/SecondUser" target="main">2次跟进客户</a></li>
+          <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Crm/PublicMsg" target="main">公海客户信息</a></li>
+		  <!--<li><a href="/meij/meijie/index.php?s=/Crm/PeerRejection" target="main">同行拒绝站点信息</a></li>-->
+                 </ul>
+      </div>
+    </div>
+    <h1 class="type"><a href="javascript:void(0)">数据统计</a></h1>
+      <div class="content" style="visibility: hidden; opacity: 0; overflow: hidden; height: 0px;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+              <td><img src="menu_topline.gif" width="182" height="5"></td>
+            </tr>
+          </tbody></table>
+        <ul class="MM">
+            <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Other" target="main">数据统计</a></li>
+        </ul>
+      </div>
+       
+      
+         <h1 class="type"><a href="javascript:void(0)">网站留言<span id="levalmsg" style="color:#F00; font-size:14px">(0)</span></a></h1>
+      <div class="content" style="visibility: hidden; opacity: 0; overflow: hidden; height: 0px;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+              <td><img src="menu_topline.gif" width="182" height="5"></td>
+            </tr>
+          </tbody></table>
+        <ul class="MM">
+            <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Other/LeaveMsg" target="main">网站留言管理</a></li>
+        </ul>
+      </div>
+      
+        <h1 class="type"><a href="javascript:void(0)">退出登录</a></h1>
+      <div class="content" style="visibility: hidden; opacity: 0; overflow: hidden; height: 0px;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+              <td><img src="menu_topline.gif" width="182" height="5"></td>
+            </tr>
+          </tbody></table>
+        <ul class="MM">
+                    <li><a href="http://manage2014.ete.cn:2745/meij/meijie/index.php?s=/Index/logout" target="_parent">退出登录</a></li>
+        </ul>
+      </div>
+      
+        <script type="text/javascript">
+		var contents = document.getElementsByClassName('content');
+		var toggles = document.getElementsByClassName('type');
+	
+		var myAccordion = new fx.Accordion(
+			toggles, contents, {opacity: true, duration: 0}
+		);
+		myAccordion.showThisHideOpen(contents[0]);
+	</script>
+        </td>
+  </tr>
+</tbody></table>
+
+</body></html>

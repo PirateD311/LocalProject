@@ -1,13 +1,22 @@
 var express = require('express');
 var router = express.Router();
+var urllib = require('url')
 var oPvStats=require('../DIY_Fun/Visitor.js');
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  //流量统计方法
-  statsFlow(req);
-  var DocHtml="<img src='http://img2.imgtn.bdimg.com/it/u=2104188810,1731935876&fm=21&gp=0.jpg' />"
-  res.json({"PvStats":oPvStat.show(),"DocHtml":DocHtml});
-  //res.render('index', { title: 'Express' });
+
+    statsFlow(req);
+    var DocHtml="<img style='position: fixed;bottom:0;right: 0;' src='http://img2.imgtn.bdimg.com/it/u=2104188810,1731935876&fm=21&gp=0.jpg' />";
+    var data={"PvStats":oPvStat.show(),"DocHtml":DocHtml};
+    var pamers=urllib.parse(req.url, true);
+    //console.log("url 是：%s",JSON.stringify(pamers.query));
+    var str =  pamers.query.jsoncallback + '(' + JSON.stringify(data) + ')';
+    //console.log("响应 是：%s",str);
+    //流量统计方法
+
+    res.send(str);
+   // res.json({"PvStats":oPvStat.show(),"DocHtml":DocHtml});
+    //res.render('index', { title: 'Express' });
 });
 //********************
 // 流量统计shi
@@ -20,10 +29,24 @@ function statsFlow(req)
     console.log(err);
   });
   */
+  var ip=G_fn_Ip_getClientIp(req);
   console.log("vistor ip : %s",G_fn_Ip_getClientIp(req));
-  oPvStat.newVisit(G_fn_Ip_getClientIp(req));
-  console.log(oPvStat.show());
-  
+  console.log("来自 [%s] 的广告请求");
+  //是否已注册
+  var sql_querySigned="select * from web_signed where web_ip = ?";
+  G_fn_DB_select(sql_querySigned,ip,function(ret){
+    console.log("查询ip注册表结果为：%s",JSON.stringify(ret));
+    if(ret.code==1){
+      console.log("IP 已注册，可返回广告。");
+    }
+    if(ret.code==2){
+      console.log("数据库错误");
+    }
+    if(ret.code==3){
+      console.log("[%s]未注册",ip);
+    }
+  });
+  //console.log(oPvStat.show());
 
 }
 

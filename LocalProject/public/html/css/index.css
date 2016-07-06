@@ -1,0 +1,74 @@
+body { margin:0 auto; padding:0; font-size:12px; }
+ul { margin:0; padding:0; }
+.main { width:980px; margin:0 auto; padding:0; } 
+.bgc { background:#F1F1F1; }
+.part1 { height:285px; }
+.part2 { height:220px; }
+.part3 { height:290px; }
+.top { background:url(images/top_bg.gif) repeat-x; height:104px; padding-top:8px; }
+.logo { background:url(images/logo2.gif) no-repeat; height:65px; }
+.logo a{ display:block;  width:241px;  height:50px;  cursor:hand; }
+.dh { background:url(images/daohang_01.jpg) no-repeat; height:35px; margin-top:4px; }
+.dh ul { list-style:none; padding-left:12px; }
+.dh li { float:left; display:block; width:105px; text-align:center; font-size:14px; font-weight:bold; padding-top:9px; padding-bottom:6px; }
+.dh a { text-decoration:none; color:#FFFFFF; }
+.dh a:hover { background:#81AEEF; padding:6px 20px; }
+.sy a { color:#000000; }
+.sy a:hover { background:url(images/sy.jpg) no-repeat; }
+.sy1 a { color:#FFFF00; }
+.sy1 a:hover { color:#FFFFFF; background:url(images/sy.jpg) no-repeat; padding:0px; }
+.tel { background:url(images/tel.jpg) no-repeat; height:60px; width:300px; margin-left:680px; }
+.login { background:url(images/login_bg.jpg) no-repeat; width:200px; height:275px; float:right; }
+.banner { background:url(images/a5h1.jpg) no-repeat; width:770px; height:275px; float:left; }
+.login_text { font-size:14px; font-weight:bold; color:#FFFFFF; padding-left:20px; margin-top:15px; }
+.login_text1 { width:100px; height:13px; }
+.login_text2 { color:#FFFFFF; padding-left:10px; margin-top:18px; }
+.login_text2 img { margin-bottom:-5px; }
+.login_text3 { width:50px; height:13px; }
+.login_text4 { padding-left:30px; padding-top:12px; margin-top:22px; }
+.login_text4 img { vertical-align:bottom; margin-bottom:-4px; *margin-top:-6px; }
+.login_text5 { padding-left:20px; }
+.login_text5 a { color:#007EBB; text-decoration:none; }
+.login_text5 a:hover { text-decoration:underline; }
+.login_text6 { text-align:center; padding-top:20px; }
+.qyqq { background:url(images/qyqq_bg.jpg) no-repeat; width:200px; height:210px; float:right; }
+.qyqq_text { color:#1881C5; line-height:38px; font-size:14px; font-weight:bold; padding-left:10px; }
+.qyqq_more { color:#000000; line-height:38px; font-size:12px; }
+.qyqq_text1 { font-weight:bold; text-align:center; margin-top:12px; color:#5C5C5C; }
+.qyqq_text2 { color:#FF7E00; }
+.qyqq img { vertical-align:bottom; margin-bottom:-5px; padding-left:10px; }
+.qyqq ul { border-bottom:1px dashed #767475; width:170px; margin:0 auto; padding-bottom:17px; }
+.qyqq li { list-style:none; color:#767475; padding-top:5px; }
+.gg1 { background:url(images/gonggao_bg.jpg) no-repeat; width:380px; height:210px; float:left; _padding-top:11px; }
+.gg1 img { padding-left:15px; }
+.gg1 ul { padding-top:8px; _padding-top:19px; width:360px; float:right; }
+.gg1 li { line-height:26px; list-style:none; background:url(images/new.jpg) no-repeat 1%; padding-left:30px; }
+.gg1 a { color:#000000; text-decoration:none; }
+.gg1 a:hover { color:#CC0000; text-decoration:underline; }
+.gg2 { background:url(images/gonggao_bg.jpg) no-repeat; width:380px; height:210px; float:left; _padding-top:11px; margin-left:10px; }
+.gg2 img { padding-left:15px; }
+.gg2 ul { padding-top:8px; _padding-top:19px; width:360px; float:right; }
+.gg2 li { line-height:26px; list-style:none; background:url(images/new.jpg) no-repeat 1%; padding-left:30px; }
+.gg2 a { color:#000000; text-decoration:none; }
+.gg2 a:hover { color:#CC0000; text-decoration:underline; }
+.tj { background:url(images/tuijian_bg.jpg) no-repeat; width:980px; height:280px; }
+.tj ul { padding-left:21px; padding-top:10px; }
+.tj li { list-style:none; float:left; width:137px; }
+.tj_text { line-height:20px; *line-height:17px; }
+.hz { background:url(images/hz_bg.jpg) no-repeat; width:770px; height:210px; float:left; }
+.hz_img { margin-top:15px; margin-left:58px; }
+.help { background:url(images/qyqq_bg.jpg) no-repeat; width:200px; height:210px; float:right; }
+.help ul { padding-left:15px; padding-top:2px; }
+.help li { list-style:none; padding-top:8px; }
+.help a { color:#000000; text-decoration:none; display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:170px; }
+.help a:hover { color:#CC0000; text-decoration:underline; }
+.foot { background:url(images/foot.jpg) no-repeat; height:80px; }
+.foot_text { float:right; line-height:20px; text-align:right; padding-top:15px; }
+.foot a { color:#000000; text-decoration:none; }
+.clear { clear:both; }
+
+
+
+.tb_dl{ display:table; width:100%; background:#F1F1F1}
+.dl ul{ float: right;}
+.dl ul li{ float:left; list-style:none; margin:5px 10px 5px 0;}

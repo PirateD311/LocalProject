@@ -1,0 +1,49 @@
+<html>
+<head>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="lib/Bootstrap/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="lib/Bootstrap/bootstrap-3.3.5-dist/css/bootstrap-theme.min.css">
+</head>
+<body>
+<h1>Hi vistor!</h1>
+<div>
+    <button onclick="getDocument2();">广告点击</button>
+    <div id="DocShow"></div>
+</div>
+<div>
+    <h2>统计结果</h2>
+    <div id="StatShow">
+    </div>
+</div>
+<div>
+    <table class="table">
+        <tr><td>dd</td><td>dd</td><td>dd</td></tr>
+        <tr><td>dd</td><td>dd</td><td>dd</td></tr>
+    </table>
+</div>
+</body>
+<script src="jquery-1.9.1.min.js" type="text/javascript" ></script>
+<script type="text/javascript">
+    var url="http://114.215.83.220/getAdvert?jsoncallback=?";
+
+    function getDocument2(){
+        $.ajax({
+            url:url,
+            type:"get",
+            dataType:'jsonp',
+            processData:false,
+            success:function(data){
+                console.log(JSON.stringify(data));
+                var str=data.PvStats;
+                console.log(str);
+                $("#StatShow").html(str);
+                $("#DocShow").html(data.DocHtml);
+            }
+        });
+    }
+
+
+
+</script>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="aliyun_114.215.83.220">
+    <serverData>
+      <paths name="aliyun_114.215.83.220">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/advertLM" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

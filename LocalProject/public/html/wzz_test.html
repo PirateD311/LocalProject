@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div style="position: relative;width:40%;left: 40%">
+        <button onclick="fun2()">获取ip信息</button>
+        <h4>网站主注册</h4>
+        <form class="" method="post" action="http://114.215.83.220/wzz/signup">
+            <input name="web_owner_name" placeholder="用户名" class="form-control" type="text" /><br>
+            <input name="web_owner_phone" placeholder="联系电话" class="form-control" type="text" /><br>
+            <input name="web_owner_phone" placeholder="QQ" class="form-control" type="text" /><br>
+            <input name="web_owner_password" placeholder="登录密码" class="form-control" type="password" /><br>
+            <input name="web_owner_password" placeholder="请再次输入" class="form-control" type="password" /><br>
+            <input value="注册" class="form-control" type="submit"/><br>
+        </form>
+    </div>
+    <div style="position: relative;width:40%;left: 40%">
+        <h4>网站主登陆</h4>
+        <form class="" method="post" action="http://114.215.83.220/wzz/login">
+            <input name="web_owner_name" placeholder="用户名" class="form-control" type="text" /><br>
+            <input name="web_owner_password" placeholder="请再次输入" class="form-control" type="password" /><br>
+            <input value="登陆" class="form-control" type="submit"/><br>
+        </form>
+    </div>
+    <div style="position: relative;width:40%;left: 40%">
+        <h4>网站登记</h4>
+        <form class="" method="post" action="http://114.215.83.220/wzz/register">
+            <input name="web_owner_name" placeholder="登录名" class="form-control" type="text" /><br>
+            <input name="web_owner_password" placeholder="密码" class="form-control" type="text" /><br>
+            <input name="web_ip" placeholder="网站IP" class="form-control" type="text" /><br>
+            <input name="web_domain" placeholder="网站域名" class="form-control" type="tel" /><br>
+            <input name="web_category" placeholder="网站类别" class="form-control" type="text" /><br>
+            <input value="登记" class="form-control" type="submit"/><br>
+        </form>
+    </div>
+    <div style="position: relative;width:40%;left: 40%">
+        <h4>网站登记</h4>
+        <form class="" method="post" action="http://114.215.83.220/wzz/personInfo">
+            <input name="web_owner_phone" placeholder="电话" class="form-control" type="text" /><br>
+            <input name="web_owner_qq" placeholder="qq" class="form-control" type="text" /><br>
+            <input name="web_owner_password" placeholder="密码" class="form-control" type="text" /><br>
+            <input name="web_god_name" placeholder="客户经理" class="form-control" type="tel" /><br>
+            <input name="web_owner_name" placeholder="用户名" class="form-control" type="text" /><br>
+            <input value="登记" class="form-control" type="submit"/><br>
+        </form>
+    </div>
+
+<script type="text/javascript">
+    function fun2(){
+        var ip=window.location.host;
+        alert(ip);
+    }
+</script>
+</body>
+</html>

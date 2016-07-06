@@ -96,18 +96,29 @@ function downloadImage(src,name){
 		});
 	}).end();
 }
-	//getAllHref('href="/p2/4/5.html"ddddw<>href="/p3/6/2.html"');
+var regexp=/href=\"\/.+?html/ig;
+var regexp2=/href=\"\/htm.+p.+?.html/ig;
+var regexp3=/href=\"\/htm.+p\d.+?.html/ig;
+
+var testcase1='href="/">首页</a>>><a href="/p02/index.html" target="_blank">亚洲色图</a>>><a href="/htm/2016/1/11/p02/353694.html';
+var testcase2='href="/htm/2015/12/23/s08/353113.html" class="img" title="健身玩的大汗淋漓再自衛爽歪歪"><img src="/pic/1223/738chs.jpg" alt="健身玩的大汗淋漓再自衛爽歪歪" /></a><h4><a href="/htm/2015/12/23/s08/353113.html';	
+	getAllHref(testcase2);
 	//http://www.rrrr58.com/htm/2016/1/15/p03/353855.html
+
 function getAllHref(data){
-	var regexp=/href=\"\/.+?.html/g;
-	var regexp2=/href=\"\/htm.+p.+?.html/g;
+
 	data=data.toString();
 	//console.log(data);
-	var urls=data.match(regexp2);
-	if(urls==null){
+	var urls=data.match(regexp);/*
+	if(urls==null||urls.length<2){
+		//console.log(data);
+		//console.log("低一级正则匹配");
 		urls=data.match(regexp);
 	}
-	//console.log(urls);
+	console.log(urls);*/
 	return urls;
 };
+		var nexturl="http://www.rrrr58.com/htm/2015/11/29/s07/352061.html";
+		console.log(nexturl.match(/\/htm.+p\d.+?.html/ig));
+		console.log(nexturl.match(/\/htm.+[a-z]\d.+?.html/ig));
 
